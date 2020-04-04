@@ -24,8 +24,8 @@
             </li>            
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search notes" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search notes" id="searchText" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnSearch">Search</button>
           </form>
         </div>
       </nav>
@@ -34,32 +34,17 @@
       <div class="container my-3">
         <h1 class="text-success text-center">This is a note taking app in Vanilla JavaScript</h1> <hr>
 
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <h5 class="card-title text-success">Take a note</h5>
+                <textarea class="form-control" id="addText" rows="6" placeholder="Never forget a moments! take them a note"></textarea>
+                <button class="btn btn-outline-success mt-3" id="addBtn">Add note</button>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                <a href="#" class="btn btn-danger">Delete</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                <a href="#" class="btn btn-danger">Delete</a>
-            </div>
+
+        <h4 class="text-success mt-4">Your Notes...</h4> <hr>
+        <div id="notes" class="row container-fluid">
+            
         </div>
       </div>
 
@@ -67,5 +52,13 @@
 
 
 <script src="script.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
